@@ -30,7 +30,9 @@ int main() {
 				//tecla 2
 			}
 			if (event.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
-				//tecla ESC
+				//tecla ESC, surt del programa
+				SDL_Quit();
+				return 0;
 			}
 			break;
 		}
