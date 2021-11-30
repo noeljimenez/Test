@@ -19,14 +19,32 @@ int main() {
 	// TODO: Finestra blanca al iniciar
 
 	// TODO: Captura de tecles: 1,2 i ESC
+	SDL_Event event;
+	while (SDL_PollEvent(&event)) {
+		switch (event.type) {
+		case SDL_KEYUP:
+			if (event.key.keysym.scancode == SDL_SCANCODE_1) {
+				//tecla 1
+			}
+			if (event.key.keysym.scancode == SDL_SCANCODE_2) {
+				//tecla 2
+			}
+			if (event.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
+				//tecla ESC
+			}
+			break;
+		}
+	}
 
 	// TODO: Funció que pinta de vermell la finestra
 
 	// TODO: Funció que pinta un quadrat aleatori verd
 
+
 	// TODO: Funció que pinta els 10 quadrats
 
 	// TODO: Fer que el programa surti amb ESC
+
 
 
 	return 0;
