@@ -24,5 +24,6 @@ int main() {
 
 	// TODO: Fer que el programa surti amb ESC
 
+
 	return 0;
 }
