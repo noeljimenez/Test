@@ -10,32 +10,30 @@ void Pinta10quadrats(SDL_Surface* surface);
 
 int main() {
 
-	// TODO: Creació de finestra
-	SDL_Window* window = NULL;
-	SDL_Surface* windowSurface = NULL;
+	// TODO: CreaciÃ³ de finestra
 
-	bool endGame = false;
+	SDL_Window* gWindow;
+	SDL_Surface* gScreenSurface;
 
-	SDL_Init(SDL_INIT_EVERYTHING);
-	window = SDL_CreateWindow("GamePad Test", SDL_WINDOWPOS_CENTERED,
-		SDL_WINDOWPOS_CENTERED, 500, 500, SDL_WINDOW_SHOWN);
+	gWindow = NULL;
+	gScreenSurface = NULL;
+	SDL_Init(SDL_INIT_VIDEO);
+	gWindow = SDL_CreateWindow("SDL Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 600, 600, SDL_WINDOW_SHOWN);
+	gScreenSurface = SDL_GetWindowSurface(gWindow);
+	// TODO: Finestra blanca al iniciar
 
-	windowSurface = SDL_GetWindowSurface(window);
-
-	// DONE: Finestra blanca al iniciar
-	SDL_FillRect(windowSurface, NULL, SDL_MapRGB(windowSurface->format, 255, 255, 255));
 
 	// TODO: Captura de tecles: 1,2 i ESC
 
 
-	// TODO: Funció que pinta de vermell la finestra 
+	// TODO: FunciÃ³ que pinta de vermell la finestra 
 	PintaDeVermell(windowSurface);
 
 
-	// TODO: Funció que pinta un quadrat aleatori verd
+	// TODO: FunciÃ³ que pinta un quadrat aleatori verd
 
 
-	// TODO: Funció que pinta els 10 quadrats 
+	// TODO: FunciÃ³ que pinta els 10 quadrats 
 	Pinta10quadrats(windowSurface);
 
 
