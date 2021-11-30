@@ -8,7 +8,14 @@
 int main() {
 
 	// TODO: Creació de finestra
+	SDL_Window* gWindow;
+	SDL_Surface* gScreenSurface;
 
+	gWindow = NULL;
+	gScreenSurface = NULL;
+	SDL_Init(SDL_INIT_VIDEO);
+	gWindow = SDL_CreateWindow("SDL Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 600, 600, SDL_WINDOW_SHOWN);
+	gScreenSurface = SDL_GetWindowSurface(gWindow);
 	// TODO: Finestra blanca al iniciar
 
 	// TODO: Captura de tecles: 1,2 i ESC
