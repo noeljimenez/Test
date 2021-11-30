@@ -4,6 +4,7 @@
 
 #include <string>
 #include <iostream>
+#include <time.h>
 
 void PintaDeVermell(SDL_Surface* surface);
 void Pinta10quadrats(SDL_Surface* surface);
@@ -25,20 +26,50 @@ int main() {
 
 	// TODO: Captura de tecles: 1,2 i ESC
 
+	SDL_Event event;
+	while (SDL_PollEvent(&event)) {
+		switch (event.type) {
+		case SDL_KEYUP:
+			if (event.key.keysym.scancode == SDL_SCANCODE_1) {
+				//tecla 1
+			}
+			if (event.key.keysym.scancode == SDL_SCANCODE_2) {
+				//tecla 2
+			}
+			if (event.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
+				//tecla ESC, surt del programa
+				SDL_Quit();
+				return 0;
+			}
+			break;
+		}
+	}
+	return 0;
+}
+	// TODO: Funci� que pinta de vermell la finestra
+PintaDeVermell(windowSurface);
+
+	// TODO: Funci� que pinta un quadrat aleatori verd
+	
+	void RandomGreenRect(SDL_Window* window, SDL_Surface* surface) {
+		srand(time(NULL));
+		SDL_Rect* rect;
+		rect->x = rand() % 200 + 1;
+		rect->y = rand() % 200 + 1;
+		rect->w = rand() % 200 + 1;
+		rect->h = rand() % 200 + 1;
+		SDL_FillRect(surface, rect, 0x00FF00);
+		SDL_UpdateWindowSurface(window);
+	}
+	// TODO: Funci� que pinta els 10 quadrats
+Pinta10quadrats(windowSurface);
+
 
 	// TODO: Funció que pinta de vermell la finestra 
 	PintaDeVermell(windowSurface);
 
 
-	// TODO: Funció que pinta un quadrat aleatori verd
-
-
-	// TODO: Funció que pinta els 10 quadrats 
-	Pinta10quadrats(windowSurface);
-
-
-	// TODO: Fer que el programa surti amb ESC
-
+	
 
 	return 0;
 }
