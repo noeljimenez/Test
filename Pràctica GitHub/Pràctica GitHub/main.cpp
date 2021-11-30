@@ -4,6 +4,7 @@
 
 #include <string>
 #include <iostream>
+#include <time.h>
 
 int main() {
 
@@ -37,17 +38,25 @@ int main() {
 			break;
 		}
 	}
-
+	return 0;
+}
 	// TODO: Funció que pinta de vermell la finestra
 
 	// TODO: Funció que pinta un quadrat aleatori verd
-
-
+	
+	void RandomGreenRect(SDL_Window* window, SDL_Surface* surface) {
+		srand(time(NULL));
+		SDL_Rect* rect;
+		rect->x = rand() % 200 + 1;
+		rect->y = rand() % 200 + 1;
+		rect->w = rand() % 200 + 1;
+		rect->h = rand() % 200 + 1;
+		SDL_FillRect(surface, rect, 0x00FF00);
+		SDL_UpdateWindowSurface(window);
+	}
 	// TODO: Funció que pinta els 10 quadrats
 
 	// TODO: Fer que el programa surti amb ESC
 
 
 
-	return 0;
-}
