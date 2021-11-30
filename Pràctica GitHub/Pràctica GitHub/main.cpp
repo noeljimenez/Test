@@ -7,9 +7,6 @@
 
 int main() {
 
-
-	// TODO: Afegir llibreria gràfica al projecte
-
 	// TODO: Creació de finestra
 
 	// TODO: Finestra blanca al iniciar
